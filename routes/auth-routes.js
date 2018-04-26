@@ -18,7 +18,7 @@ router.get('/logout', (req,res) =>{
 });
 
 //auth/google/redirect
-router.get('/google/redirect', (req,res) => {
+router.get('/google/redirect', passport.authenticate('google'), (req,res) => {
     res.send('You reached call-back URL');
 });
 
